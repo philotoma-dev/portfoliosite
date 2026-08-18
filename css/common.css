@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+     font-size: 16px;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #222;
+     font-family: "Noto Sans JP", sans-serif, Arial;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ==========================================
+   Header
+   ========================================== */header {
+    width: 90%;
+    max-width: 1120px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 160px;
+}
+
+.logo-top {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.logo-top a {
+    text-decoration: none;
+    color: #909090;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.main-menu {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+/* ホバー時の設定 */
+
+.logo-top a:hover {
+    transform: scale(0.98);
+    color: #e0e0e0; 
+}
+
+.nav a:hover,
+.main-menu a:hover {
+    color: #e0e0e0; 
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   Hamburger Menu
+   ========================================== */
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.hamburger_border {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1a1a1a;
+    position: absolute;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.hamburger_border_top {
+    top: 0;
+}
+
+.hamburger_border_center {
+    top: 8px;
+}
+
+.hamburger_border_bottom {
+    top: 16px;
+}
+
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 32px 20px;
+    box-sizing: border-box;
+    gap: 16px;
+    background-color: #f5f5f5;
+}
+
+.footer-line {
+    width: 80%;
+    border: none;
+    border-top: 1.6px solid #e0e0e0;
+    margin: 0 auto 16px auto;
+}
+
+footer nav {
+    width: auto;
+    margin: 0;
+}
+
+small {
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   PC
+   769px以上
+   ========================================== */
+
+@media screen and (min-width: 769px) {
+
+    .nav-burger,
+    .hamburger,
+    .black_bg {
+        display: none !important;
+    }
+
+}
+
+
+/* ==========================================
+   Smartphone
+   768px以下
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 12px;
+        justify-content: space-between;
+    }
+
+    .header .nav {
+        display: none;
+    }
+
+    .logo-top {
+        font-size: 1rem;
+    }
+
+    /* ハンバーガー */
+
+    .hamburger {
+        display: block;
+    }
+
+
+    /* ハンバーガー線 */
+
+    .hamburger_border_top {
+        top: 0;
+    }
+
+    .hamburger_border_center {
+        top: 8px;
+    }
+
+    .hamburger_border_bottom {
+        top: 16px;
+    }
+
+
+    /* ==========================================
+       Hamburger Navigation
+       ========================================== */
+
+    .nav-burger {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        z-index: 90;
+        transition: right 0.3s ease;
+        padding: 80px 20px 20px;
+        box-sizing: border-box;
+    }
+
+    .nav_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav_item {
+        margin-bottom: 24px;
+    }
+
+    .nav_item a {
+        text-decoration: none;
+        color: #1a1a1a;
+        font-size: 1.1rem;
+    }
+
+
+    /* ==========================================
+       Background
+       ========================================== */
+
+    .black_bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 80;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+
+
+    /* ==========================================
+       Open
+       ========================================== */
+
+    body.nav-open .nav-burger {
+        right: 0;
+    }
+
+    body.nav-open .black_bg {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.nav-open .hamburger_border_top {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+
+    body.nav-open .hamburger_border_center {
+        opacity: 0;
+    }
+
+    body.nav-open .hamburger_border_bottom {
+        top: 9px;
+        transform: rotate(-45deg);
+    }
+
+}

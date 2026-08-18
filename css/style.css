@@ -1,0 +1,537 @@
+@charset "utf-8";
+
+/* ==========================================
+   Main Visual (MV)
+   ========================================== */
+
+.mv {
+    padding: 20px 0;
+    position: relative;
+    max-width: 1120px;
+    margin: 100px auto;
+    height: 560px;
+    /* Swiperの高さに合わせて確保 */
+}
+
+/* 文字の配置調整 */
+.mv h1 {
+    position: absolute;
+    bottom: 460px;
+    left: 20px;
+    z-index: 10;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 7.2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+
+/* Swiperコンテナ（画像エリア）の調整 */
+.mv-swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 460px;
+    z-index: 1;
+}
+
+/* スライド内の画像 */
+.mv .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================
+   Profile
+   ========================================== */
+.profile {
+    background-color: #D6E6F1;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: rotate(-10deg);
+    will-change: transform;
+}
+
+.profile h2 {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    background-image: url("../image/text-bg.png");
+    background-size: 130% 45px;
+    /* 横幅を少し広めに調整 */
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    /* 少し上に調整して文字と被せる */
+}
+
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 30px auto 30px;
+    height: 460px;
+    margin-bottom: 30px;
+}
+
+.image-box img {
+    width: 480px;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-box img:last-child {
+    margin-left: -80px;
+    z-index: 1;
+    transform: rotate(6deg);
+}
+
+
+.text-profile {
+    max-width: 680px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.name-box {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.name-box .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.name-box .ruby {
+    font-size: 0.85rem;
+    color: #444;
+    margin: 0;
+}
+
+.text-profile p {
+    line-height: 1.8;
+    margin: -4px 0 0 0;
+    color: #222;
+}
+
+/* ==========================================
+   Skills & Skilld Container
+   ========================================== */
+.skills {
+    position: relative;
+    width: 100%;
+    margin-top: 120px;
+    padding: 80px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.skills-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../image/skills.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.skilld-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.skills h2 {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    text-align: center !important;
+    /* 追加：確実に中央に寄せる */
+    background-image: url("../image/text-bg.png");
+    background-size: 130% 45px;
+    /* 横幅を広げる（短さを解消） */
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    /* 少し上に調整して文字と被せる */
+}
+
+.cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+
+.skills-stars {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.skills-subtitle {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+.skills-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+/* ==========================================
+   Works
+   ========================================== */
+.works {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.works h2 {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    display: inline-block;
+    text-align: center !important;
+    /* 追加：確実に中央に寄せる */
+    background-image: url("../image/text-bg.png");
+    background-size: 130% 45px;
+    /* 横幅を広げる（短さを解消） */
+    background-repeat: no-repeat;
+    background-position: center 70%;
+    /* 少し上に調整して文字と被せる */
+}
+
+.works-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 16px;
+}
+
+.works-item {
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.works-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.works-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.works-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.works-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.works-body {
+    padding: 20px 24px 28px;
+}
+
+.works-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #333333;
+    line-height: 1.4;
+}
+
+.works-category {
+    font-size: 0.85rem;
+    color: #666666;
+    margin: 0;
+}
+
+/* ==========================================
+   PC表示用の設定 (769px以上)
+   ========================================== */
+@media screen and (min-width: 769px) {
+    .skilld-container {
+        position: relative;
+        z-index: 1;
+        max-width: 1120px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .skills h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .skills-swiper {
+        overflow: visible !important;
+        width: 100% !important;
+    }
+
+    .skills-swiper .cards.swiper-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 24px !important;
+        transform: none !important;
+        width: 100% !important;
+    }
+
+    .skills-swiper .card.swiper-slide {
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    .skills-swiper .swiper-pagination {
+        display: none !important;
+    }
+
+    .works-swiper {
+        overflow: visible !important;
+    }
+
+    .works-swiper .works-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px 24px !important;
+        transform: none !important;
+    }
+
+    .works-swiper .works-item {
+        width: auto !important;
+        margin: 0 !important;
+    }
+
+    .works-swiper .swiper-pagination {
+        display: none !important;
+    }
+}
+
+/* ==========================================
+   スマホ表示の設定 (768px以下)
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+    .skills-swiper,
+    .works-swiper {
+        width: 100%;
+        padding-bottom: 40px !important;
+        overflow: hidden;
+    }
+
+    .skills-swiper .cards,
+    .works-swiper .works-list {
+        display: flex !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+    }
+
+    .skills-swiper .swiper-pagination-bullet-active,
+    .works-swiper .swiper-pagination-bullet-active {
+        background: #1a1a1a;
+    }
+
+
+   .mv {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        margin-top: 30px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .mv h1 {
+        font-size: 3.6rem;
+        text-align: center;
+        color: #ffffff;
+        position: absolute; /* または absolute を外してもOKです */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .mv-swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mv .swiper-slide {
+        height: 100%;
+    }
+
+    .mv .image {
+        width: 100%;
+        height: 100%; 
+        overflow: hidden;
+    }
+
+    /* 共通の画像設定 */
+    .mv .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* 1枚目の位置調整 */
+    .mv .mv-slide01 img {
+        object-position: 40% 60%; 
+    }
+
+    /* 2枚目の位置調整 */
+    .mv .mv-slide02 img {
+        object-position: 20% 80%; 
+    }
+    
+
+
+    .profile {
+        width: 95%;
+        padding: 40px 20px;
+        height: auto;
+    }
+
+    .profile h2 {
+        font-size: 3.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-box {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-box img:first-child {
+        width: 100%;
+    }
+
+    .image-box img:last-child {
+        display: none;
+    }
+
+    .text-profile {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .works {
+        width: 100%;
+        padding: 50px 15px;
+        box-sizing: border-box;
+    }
+
+.skilld-container {
+        text-align: center;
+        width: 100%;
+    }
+
+    
+.skills h2 {
+        font-size: 3.2rem;
+        padding: 0;
+        margin: 0;
+        text-align: center !important; 
+    }
+
+    .skills-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0 0 10px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ccc;
+        color: #333;
+    }
+
+    .works h2 {
+        font-size: 3.2rem;
+        padding: 0;
+        margin: 0;
+    }
+}
