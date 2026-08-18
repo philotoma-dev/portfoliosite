@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Portfolio site</title>
+     <link rel="icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <p class="logo-top"><a href="#">Portfolio site</a></p>
+
+        <nav class="nav">
+            <ul class="main-menu">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+
+        <!-- ハンバーガーメニュー -->
+        <nav class="nav-burger">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html">Top</a></li>
+                <li class="nav_item"><a href="#profile">Profile</a></li>
+                <li class="nav_item"><a href="#skills">Skills</a></li>
+                <li class="nav_item"><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger" id="js-hamburger">
+            <span class="hamburger_border hamburger_border_top"></span>
+            <span class="hamburger_border hamburger_border_center"></span>
+            <span class="hamburger_border hamburger_border_bottom"></span>
+        </div>
+        <div class="black_bg" id="js-black-bg"></div>
+    </header>
+
+    <section class="mv" id="mv">
+        <h1>Maho Haraguchi</h1>
+
+        <!-- Swiper用のラッパー -->
+        <div class="swiper mv-swiper">
+            <div class="swiper-wrapper">
+                <!-- 1枚目のスライドにクラスを追加 -->
+                <div class="swiper-slide image mv-slide01">
+                    <img src="image/mv-top.jpg" alt="メインビジュアル-海の画像">
+                </div>
+                <!-- 2枚目のスライドにクラスを追加 -->
+                <div class="swiper-slide image mv-slide02">
+                    <img src="image/mv-top2.jpg" alt="メインビジュアル-海の画像">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ここからプロフィール -->
+    <section class="profile" id="profile">
+        <h2>Profile</h2>
+        <div class="image-box">
+            <img class="mv-first" src="image/cheki1.png" alt="羊と遊ぶ写真">
+            <img class="mv-second" src="image/cheki2.png" alt="海の写真">
+        </div>
+
+        <div class="text-profile">
+            <div class="name-box">
+                <p class="name">原口 真穂</p>
+                <p class="ruby">ハラグチ マホ</p>
+            </div>
+
+            <p>1998年生まれ。<br>
+                大学卒業後、Webデザイナーアシスタントや物件カメラマンとして勤務。
+                その後、1度クリエイティブ職から離れたことで「デザイン業務へのやりがい」を再認識し、Webデザイナーの道へ進むことを決意。
+                現在は職業訓練にてWebデザインを体系的に学びなおし中です。
+                目的から逆算して「効果のあるデザイン」を作り、課題解決や目標達成に貢献できるデザイナーを目指しています。
+                動物との触れ合いや音楽鑑賞、海でぼーっとすることが好きです。</p>
+        </div>
+    </section>
+
+    <!-- ここからSkills -->
+    <section class="skills" id="skills">
+        <div class="skills-bg"></div>
+
+        <!-- コンテナを追加してタイトルとスワイパーを包む -->
+        <div class="skilld-container">
+            <h2>Skills</h2>
+
+            <!-- swiper コンテナ -->
+            <div class="swiper skills-swiper">
+                <ul class="cards swiper-wrapper">
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">Photoshop</h4>
+                        <img class="skills-stars" src="image/star4.png" alt="星4つ">
+                        <p class="skills-subtitle">使用歴 : 約4年（実務3年7ヶ月）</p>
+                        <p class="skills-text">
+                            実務ではWebデザインやバナー制作、写真のレタッチを行う際にメインツールとして使用していました。さらに職業訓練を経て、基礎から応用まで体系的に習得しました。
+                        </p>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">Illustrator</h4>
+                        <img class="skills-stars" src="image/star3.png" alt="星3つ">
+                        <p class="skills-subtitle">使用歴 : 約2年（実務1年8ヶ月）</p>
+                        <p class="skills-text">
+                            実務ではロゴやアイコンなどWebデザイン用の素材の作成に使用しました。個人ではフライヤーや名刺など印刷物のデザインに使用しています。さらに職業訓練を経て、基礎から応用まで体系的に習得しました。
+                        </p>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">Figma</h4>
+                        <img class="skills-stars" src="image/star2.png" alt="星2つ">
+                        <p class="skills-subtitle">使用歴 : 約6ヵ月（実務なし）</p>
+                        <p class="skills-text">
+                            職業訓練にて基本操作からデザインへの応用までをしっかりと学習しました。主にワイヤーフレームの作成や、コンポーネントを活用したデザインカンプの制作で使用しています。
+                        </p>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">HTML / CSS</h4>
+                        <img class="skills-stars" src="image/star2.png" alt="星2つ">
+                        <p class="skills-subtitle">使用歴 : 約6ヵ月(実務なし)</p>
+                        <p class="skills-text">
+                            職業訓練にてHTML/CSSを基礎から体系的に学習し、Webクリエイター能力認定試験に合格しました。授業課題や個人制作を通してWebサイト制作を行い、基本的なコーディングやレスポンシブ対応が可能です。
+                        </p>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">Premiere Pro</h4>
+                        <img class="skills-stars" src="image/star3.png" alt="星3つ">
+                        <p class="skills-subtitle">使用歴 : 約2年（実務1年8ヶ月）</p>
+                        <p class="skills-text">
+                            実務ではSNS投稿用の動画編集のほか、アルバイトでブライダル動画の編集経験があります。カット編集、テロップ挿入、BGM調整など、基本的な一連の動画編集が可能です。
+                        </p>
+                    </li>
+
+                    <li class="card swiper-slide">
+                        <h4 class="skills-title">Photo / Retouch</h4>
+                        <img class="skills-stars" src="image/star3.png" alt="星3つ">
+                        <p class="skills-subtitle">使用歴 : 約4年（実務3年7ヶ月）</p>
+                        <p class="skills-text">
+                            一眼レフカメラを用いたマニュアル撮影が可能です。物撮り、簡易的な人物撮影、物件撮影の実務経験があります。LightroomやPhotoshopを使用したレタッチまで一貫して対応できます。
+                        </p>
+                    </li>
+                </ul>
+                <!-- ページネーション（ドット） -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- works -->
+    <section class="works" id="works">
+        <h2>Works</h2>
+
+        <!-- swiper コンテナ -->
+        <div class="swiper works-swiper">
+            <ul class="works-list swiper-wrapper">
+                <li class="works-item swiper-slide">
+
+
+
+                    <a href="works/works-school.html">
+                        <div class="works-image"><img src="image/work-image2.jpg" alt="デザインスクールHP"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">デザインスクールHP</h3>
+                            <p class="works-category">授業課題 / Web Site</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-portfolio.html">
+                        <div class="works-image"><img src="image/work-image3.jpg" alt="自分のポートフォリオサイト"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">ポートフォリオサイト</h3>
+                            <p class="works-category">授業課題 / Web Site</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-ayaonon.html">
+                        <div class="works-image"><img src="image/work-image1.jpg" alt="彩音-Ayaonon HP"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">アーティストHP</h3>
+                            <p class="works-category">Client Work / Web Site</p>
+                        </div>
+                    </a>
+                </li>
+
+
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-mizu.html">
+                        <div class="works-image"><img src="image/works-3lp.jpg" alt="天然水LP"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">天然水LP</h3>
+                            <p class="works-category">自主制作 / Web LP</p>
+                        </div>
+                    </a>
+                </li>
+
+
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-lens.html">
+                        <div class="works-image"><img src="image/work-image4.jpg" alt="コンタクトレンズバナー"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">コンタクトレンズバナー</h3>
+                            <p class="works-category">自主制作 / Web Banner</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="works-item swiper-slide">
+                    <a href="works/works-sale.html">
+                        <div class="works-image"><img src="image/work-image5.jpg" alt="セール告知バナー"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">セール告知バナー</h3>
+                            <p class="works-category">自主制作 / Web Banner</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="works-item swiper-slide">
+                    <a href="works/works-jobbunner.html">
+                        <div class="works-image"><img src="image/work-image6.jpg" alt="求人広告バナー"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">求人広告バナー</h3>
+                            <p class="works-category">自主制作 / Web Banner</p>
+                        </div>
+                    </a>
+                </li>
+
+
+
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-osechi.html">
+                        <div class="works-image"><img src="image/work-image8.jpg" alt="おせちチラシ"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">おせちチラシ</h3>
+                            <p class="works-category">自主制作 / Graphic</p>
+                        </div>
+                    </a>
+                </li>
+
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-lyric.html">
+                        <div class="works-image"><img src="image/work-image9.jpg" alt="歌詞カード"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">歌詞カードデザイン</h3>
+                            <p class="works-category">Client Work / Graphic</p>
+                        </div>
+                    </a>
+                </li>
+
+
+
+                <li class="works-item swiper-slide">
+                    <a href="works/works-pizza.html">
+                        <div class="works-image"><img src="image/work-image10.jpg" alt="ピザフェスタのチラシ"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">ピザフェスタのチラシ</h3>
+                            <p class="works-category">自主制作 / Graphic</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="works-item swiper-slide">
+                    <a href="works/works-photo1.html">
+                        <div class="works-image"><img src="image/work-image11.jpg" alt="アーティスト写真撮影"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">アーティスト写真撮影</h3>
+                            <p class="works-category">Client Work / Photo</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="works-item swiper-slide">
+                    <a href="works/works-photo2.html">
+                        <div class="works-image"><img src="image/work-image12.jpg" alt="ボトル商品撮影"></div>
+                        <div class="works-body">
+                            <h3 class="works-title">小瓶の写真撮影</h3>
+                            <p class="works-category">自主制作 / Photo</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- ページネーション（ドット） -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <footer>
+        <hr class="footer-line">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="index.html">Top</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+        <small>&copy; 2026 Maho Haraguchi</small>
+    </footer>
+
+
+
+
+
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <!-- ハンバーガーメニュー -->
+    <script src="js/common.js"></script>
+
+
+    <!-- Profileの傾き -->
+    <script src="js/profile.js"></script>
+
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- jquery.ripples -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+
+    <!-- Ripples用JavaScript -->
+    <script src="js/ripples.js"></script>
+
+
+
+</body>
+
+</html>
