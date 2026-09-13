@@ -116,6 +116,31 @@ p a:hover {
     width: 25%;
 }
 
+.works-ec {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.works-ec .all-pic {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.works-graphic {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.works-graphic .all-pic {
+    display: block;
+    margin: 0 auto;
+}
+
 /* =========================
 Other / スライダー (PCデフォルト)
 ========================= */
@@ -167,7 +192,7 @@ Other / スライダー (PCデフォルト)
 .other-inner {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .other-title {
@@ -325,6 +350,7 @@ footer {
     .works-screen .all-respic {
         width: 50%;
     }
+
 
     .other {
         width: 100%;
